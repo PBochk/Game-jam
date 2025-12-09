@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Shooter.Gameplay
 {
@@ -17,6 +18,19 @@ namespace Shooter.Gameplay
         [SerializeField] private Rigidbody RigidBody;
         [SerializeField] private int Damage = 10;
         [SerializeField] private GameObject DeathParticlePrefab;
+        [SerializeField] private Transform firePoint; 
+        [SerializeField] private float attackCooldown = 2f;
+        [SerializeField] private GameObject enemyProjectilePrefab;
+        [SerializeField] private float projectileSpeed = 40f;
+        [SerializeField] private float collisionDamage = 10f;
+        [SerializeField] private float collisionKnockbackForce = 5f;
+
+
+        private static float playerInvulnerabilityTimer = 0f;
+        private const float INVULNERABILITY_DURATION = 1f;
+
+        private float currentAttackTimer = 0f;
+        private bool canAttack = true;
 
 
 
@@ -42,10 +56,26 @@ namespace Shooter.Gameplay
 
         void FixedUpdate()
         {
+
+            if (playerInvulnerabilityTimer > 0)
+            {
+                playerInvulnerabilityTimer -= Time.fixedDeltaTime;
+            }
+
+
             if (DamageControl.IsDead && !IsDead)
             {
                 HandleDeath();
                 return;
+            }
+
+            if (!canAttack)
+            {
+                currentAttackTimer -= Time.fixedDeltaTime;
+                if (currentAttackTimer <= 0)
+                {
+                    canAttack = true;
+                }
             }
 
             var playerPosition = PlayerTarget.position;
@@ -60,14 +90,102 @@ namespace Shooter.Gameplay
             else
             {
                 StopMovement();
+                RotateTowardsPlayer();
+
+            }
+            if (canAttack)
                 Attacking();
+        }
+
+        public void OnCollisionStay(Collision collision)
+        {
+            var obj = collision.gameObject;
+            if (!obj.CompareTag("Player")) return;
+
+            if (playerInvulnerabilityTimer > 0) return;
+
+            ApplyCollisionDamage(obj, collision);
+        }
+
+
+        private void ApplyCollisionDamage(GameObject player, Collision collision)
+        {
+            DamageControl playerDC = player.GetComponent<DamageControl>();
+            if (playerDC != null && !playerDC.IsDead)
+            {
+                var direction = (player.transform.position - transform.position).normalized;
+
+                playerDC.ApplyDamage(collisionDamage, direction, 1f);
+
+                playerInvulnerabilityTimer = INVULNERABILITY_DURATION;
+
+                ApplyKnockback(player, direction);
+            }
+        }
+
+        private void ApplyKnockback(GameObject player, Vector3 direction)
+        {
+            var playerRb = player.GetComponent<Rigidbody>();
+            if (playerRb != null)
+            {
+                direction.y = 0.3f;
+                playerRb.AddForce(direction * collisionKnockbackForce, ForceMode.Impulse);
             }
         }
 
         private void Attacking()
         {
+            if (enemyProjectilePrefab is null)
+            {
+                Debug.LogWarning("EnemyProjectilePrefab не назначен!");
+                return;
+            }
 
+            canAttack = false;  
+            currentAttackTimer = attackCooldown;
+
+            if (Animator != null)
+            {
+                Animator.SetTrigger("Attack");
+            }
+
+            var directionToPlayer = (PlayerTarget.position - transform.position).normalized;
+
+            SpawnProjectile(directionToPlayer);
         }
+
+        private void SpawnProjectile(Vector3 direction)
+        {
+            Vector3 spawnPosition;
+            if (firePoint != null)
+                spawnPosition = firePoint.position;
+            else
+                spawnPosition = transform.position + Vector3.up * 1.5f;
+
+            var projectile = Instantiate(
+                enemyProjectilePrefab,
+                spawnPosition,
+                Quaternion.LookRotation(direction)
+            );
+
+            var proj = projectile.GetComponent<Projectile_Base>();
+            if (proj != null)
+            {
+                proj.Creator = gameObject;
+                proj.Speed = projectileSpeed;
+                proj.Damage = Damage; 
+                proj.m_Range = distanceToAttack * 1.5f;
+            }
+
+            var projCollision = projectile.GetComponent<ProjectileCollision>();
+            if (projCollision != null)
+            {
+                projCollision.m_Creator = gameObject;
+                projCollision.m_Damage = Damage;
+                projCollision.m_IsEnemyTeam = true; 
+            }
+        }
+
         public virtual void HandleDeath()
         {
             if (IsDead) return;

@@ -9,7 +9,8 @@ using UnityEngine.Video;
 public class VideoPresentation : MonoBehaviour
 {
     [SerializeField] private List<VideoClip> videos;
-    [SerializeField] private VideoPlayer source;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] Button next;
     [SerializeField] private List<string> texts;
     [SerializeField] private TMP_Text hint;
@@ -22,16 +23,16 @@ public class VideoPresentation : MonoBehaviour
 
     private void ChangeVideo()
     {
-        source.Pause();
-        Debug.Log(currentIndex + "  " + videos.Count);
+        videoPlayer.Pause();
+        audioSource.Play();
         if (currentIndex >= videos.Count)
         {
             SceneManager.LoadScene("MainMenu");
             return;
         }
         hint.text = texts[currentIndex];
-        source.clip = videos[currentIndex];
-        source.Play();
+        videoPlayer.clip = videos[currentIndex];
+        videoPlayer.Play();
         currentIndex++;
     }
 }

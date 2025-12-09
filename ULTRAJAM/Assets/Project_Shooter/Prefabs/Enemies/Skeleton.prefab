@@ -147,13 +147,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 1
   Prefab: {fileID: 3361941984862778562}
-  distanceToAttack: 5
+  distanceToAttack: 10
   speed: 5
   attackSpeed: 2
   RigidBody: {fileID: 1969110636511566175}
   Damage: 10
   DeathParticlePrefab: {fileID: 7131295369910517025, guid: 9c5a8cf448f58444abb5cea841a26894,
     type: 3}
+  firePoint: {fileID: 0}
+  attackCooldown: 2
+  enemyProjectilePrefab: {fileID: 3369402403857273917, guid: c19017a2aee5a424282ef2c15b49dd63,
+    type: 3}
+  projectileSpeed: 40
   IsDead: 0
   nAlerted: 0
   Animator: {fileID: 5866666021909216657, guid: c0e8ec4be6a4d554881a5c8bb6d0c0cf,
