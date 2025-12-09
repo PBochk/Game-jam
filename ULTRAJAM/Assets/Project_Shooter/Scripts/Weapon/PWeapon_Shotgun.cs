@@ -8,6 +8,8 @@ namespace Shooter.Gameplay
     {
         [Header("Shotgun Custom")]
         public float m_ReloadTime = 1.5f; // Установите желаемое время перезарядки (например, 1.5 сек)
+
+        public float CostPerShot = 1f;
         private bool m_IsShooting = false;
 
         // Удаляем Start и Update из оригинального кода, т.к. они используют старую логику задержки.
@@ -45,6 +47,17 @@ namespace Shooter.Gameplay
 
         public override void FireWeapon()
         {
+            DamageControl playerDC = m_Owner.GetComponent<DamageControl>();
+
+            if (playerDC != null)
+            {
+                // Наносим урон себе:
+                playerDC.ApplyDamage(
+                    CostPerShot, // Стоимость
+                    m_Owner.transform.forward, // Направление (любое, так как урон себе)
+                    1.0f); // Damage Factor
+            }
+            
             GameObject obj;
             int pelletCount = 0;
             float maxSpreadAngle = 0;
