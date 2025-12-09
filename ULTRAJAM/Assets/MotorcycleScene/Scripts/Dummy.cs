@@ -5,6 +5,8 @@ public class Dummy : MonoBehaviour
 {
     private Transform player;
     private bool isAlive = false;
+    [SerializeField]
+    private GameObject DeathParticlePrefab;
 
     public Action<Dummy> OnDeath;
 
@@ -55,6 +57,12 @@ public class Dummy : MonoBehaviour
     {
         if (!isAlive) return;
 
+        var obj = Instantiate(DeathParticlePrefab);
+        obj.transform.position = transform.position;
+        var pr = obj.GetComponent<ParticleSystem>();
+        pr.Play();
+        Destroy(obj, 3);
+        
         isAlive = false;
         gameObject.SetActive(false);
         OnDeath?.Invoke(this);
