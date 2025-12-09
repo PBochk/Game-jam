@@ -164,7 +164,7 @@ namespace Shooter.Gameplay
                 Quaternion newRotation = Quaternion.AngleAxis(20, axis);
 
                 //find target
-                //List<TargetObject> targets = TargetsControl.m_Main.m_Targets;
+                List<TargetObject> targets = TargetsControl.m_Main.m_Targets;
 
                 TargetObject bestTarget = null;
                 float minAngle = 40;
