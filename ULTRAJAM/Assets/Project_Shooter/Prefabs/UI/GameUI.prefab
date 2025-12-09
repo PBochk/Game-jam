@@ -184,8 +184,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7009428221134649771}
-  - {fileID: 2724232571449791331}
   - {fileID: 436527895531837574}
+  - {fileID: 2724232571449791331}
   m_Father: {fileID: 7009428221368729626}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -388,25 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ac84df38611904db7cc1ef6fe60b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerTexts_1:
-  - {fileID: 0}
-  m_GemCountText: {fileID: 0}
-  m_GunNameText: {fileID: 0}
-  m_AimTargetImage: {fileID: 0}
-  m_MainCanvas: {fileID: 7009428219989620995}
-  m_WeaponPowerTime: {fileID: 0}
   m_PlayerHealth: {fileID: 2738678480470416782}
-  m_BossHealthBase: {fileID: 0}
-  m_BossHealth: {fileID: 0}
-  m_PowerBase: {fileID: 0}
-  m_PowerBar: {fileID: 0}
-  m_PowerNameText: {fileID: 0}
-  m_PowerAmountText: {fileID: 0}
-  m_WeaponNames:
-  - PISTOL
-  - SHOTGUN
-  - MACHINGUN
-  - PLASMA GUN
   vignette: {fileID: 1419802777356281156}
 --- !u!1 &7295216594447465337
 GameObject:
