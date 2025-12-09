@@ -43,7 +43,7 @@ namespace Shooter.Gameplay
             CameraControl.m_Current.m_BossTarget = m_BossObject.transform;
             m_BossObject.GetComponent<Enemy>().EnableEnemy();
             m_BossBlockBack1.SetActive(true);
-            UI_HUD.m_Main.ShowBossHealth();
+            //UI_HUD.m_Main.ShowBossHealth();
             CameraControl.m_Current.m_BackBlock.gameObject.SetActive(false);
             StartCoroutine(Co_SpawnSmallEnemies());
         }
