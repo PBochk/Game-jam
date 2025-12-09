@@ -69,6 +69,7 @@ namespace Shooter.Gameplay
                 Damage = 0;
                 IsDead = true;
             }
+            Debug.Log("OnDamaged.Invoke()");
             OnDamaged.Invoke();
             StartCoroutine(Co_HitGlow());
         }
