@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Shooter.Gameplay
 {
@@ -51,6 +53,7 @@ namespace Shooter.Gameplay
 
             if (playerDC != null)
             {
+                var damage = MathF.Min(CostPerShot, playerDC.Damage - 1);
                 // Наносим урон себе:
                 playerDC.ApplyDamage(
                     CostPerShot, // Стоимость

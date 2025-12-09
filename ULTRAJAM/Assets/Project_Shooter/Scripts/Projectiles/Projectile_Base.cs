@@ -67,6 +67,10 @@ namespace Shooter.Gameplay
                         d.ApplyDamage(Damage, transform.forward, 1);
                     }
                     Destroyed(hit.point);
+                    if (Creator.TryGetComponent<DamageControl>(out var PlayerDc))
+                    {
+                        PlayerDc.AddHealth(7f);
+                    }
                 }
 
             }
