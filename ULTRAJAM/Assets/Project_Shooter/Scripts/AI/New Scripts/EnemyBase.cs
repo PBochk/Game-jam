@@ -110,7 +110,7 @@ namespace Shooter.Gameplay
 
         private void ApplyCollisionDamage(GameObject player, Collision collision)
         {
-            DamageControl playerDC = player.GetComponent<DamageControl>();
+            var playerDC = player.GetComponent<DamageControl>();
             if (playerDC != null && !playerDC.IsDead)
             {
                 var direction = (player.transform.position - transform.position).normalized;
