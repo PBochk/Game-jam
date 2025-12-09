@@ -160,7 +160,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b5590636be0bdea49a0e931165c0cfcc, type: 3}
   m_Resource: {fileID: 8300000, guid: b5590636be0bdea49a0e931165c0cfcc, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -905,7 +905,8 @@ MonoBehaviour:
   videos:
   - {fileID: 32900000, guid: 790644ec46f76944d9d1d9ade4116594, type: 3}
   - {fileID: 32900000, guid: 8f6526b1db84a9849918e84c7279ff25, type: 3}
-  source: {fileID: 1797532702}
+  audioSource: {fileID: 1266086196}
+  videoPlayer: {fileID: 1797532702}
   next: {fileID: 243100817}
   texts:
   - "\u0411\u0415\u0413\u0418 \u041D\u0410 WASD"
