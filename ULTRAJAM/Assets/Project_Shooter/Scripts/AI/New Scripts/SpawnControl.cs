@@ -12,6 +12,7 @@ namespace Shooter.Gameplay
         [SerializeField] private int MaxEnemiesCount;
         [SerializeField] private int MinEnemiesCount;
         [SerializeField] private List<SpawnerPoint> spawnPoints;
+        public int CountOfKills =  0;
         public bool isCanSpawn = true;
         public int CurrentEnemiesCount;
         public List<GameObject> enemies;
@@ -43,7 +44,7 @@ namespace Shooter.Gameplay
                 var tracker = spawnedEnemy.AddComponent<EnemyTracker>();
                 tracker.OnEnemyDestroyed += () => RemoveEnemy(spawnedEnemy);
 
-
+                OnEnemySpawned?.Invoke(spawnedEnemy);
 
                 yield return new WaitForSeconds(2);
             }
@@ -51,6 +52,8 @@ namespace Shooter.Gameplay
 
         private void RemoveEnemy(GameObject enemy)
         {
+            CountOfKills++;
+            Debug.Log(CountOfKills);
             if (enemies.Contains(enemy))
            
                 enemies.Remove(enemy);
