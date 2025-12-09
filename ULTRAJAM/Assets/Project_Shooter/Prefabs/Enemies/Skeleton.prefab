@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 1
   Prefab: {fileID: 3361941984862778562}
-  distanceToAttack: 10
+  distanceToAttack: 5
   speed: 5
   attackSpeed: 2
   RigidBody: {fileID: 1969110636511566175}

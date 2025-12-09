@@ -15,10 +15,6 @@ namespace Shooter.Gameplay
         public int CurrentEnemiesCount;
         public List<GameObject> enemies;
 
-        public void Awake()
-        {
-            object value = Random.Range(1, 5);
-        }
 
         public void Update()
         {
@@ -35,13 +31,31 @@ namespace Shooter.Gameplay
         {
             for (var i = 0; i < enemiesInWave; i++)
             {
-                enemies.Add(
-                    spawnPoints[Random.Range(0, spawnPoints.Count)]
-                    .SpawnEnemy(enemyPrefabs[Random.Range(0, enemyPrefabs.Count - 1)])
-                    );
+                var spawnedEnemy = spawnPoints[Random.Range(0, spawnPoints.Count)]
+                  .SpawnEnemy(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)]);
+                enemies.Add(spawnedEnemy);
+                var tracker = spawnedEnemy.AddComponent<EnemyTracker>();
+                tracker.OnEnemyDestroyed += () => RemoveEnemy(spawnedEnemy);
                 yield return new WaitForSeconds(2);
             }
         }
-        
+
+        private void RemoveEnemy(GameObject enemy)
+        {
+            if (enemies.Contains(enemy))
+           
+                enemies.Remove(enemy);
+        }
+
+        private class EnemyTracker : MonoBehaviour
+        {
+            public System.Action OnEnemyDestroyed;
+
+            private void OnDestroy()
+            {
+                OnEnemyDestroyed?.Invoke();
+            }
+        }
+
     }
 }
