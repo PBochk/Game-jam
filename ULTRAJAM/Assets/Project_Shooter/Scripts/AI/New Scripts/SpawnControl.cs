@@ -53,7 +53,6 @@ namespace Shooter.Gameplay
         private void RemoveEnemy(GameObject enemy)
         {
             CountOfKills++;
-            Debug.Log(CountOfKills);
             if (enemies.Contains(enemy)) 
                 enemies.Remove(enemy);
         }

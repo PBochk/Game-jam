@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,6 +10,8 @@ public class Intro : MonoBehaviour
     [SerializeField] Button next;
     [SerializeField] private Image current;
     [SerializeField] private AudioSource source;
+    [SerializeField] private List<string> texts;
+    [SerializeField] private TMP_Text desc;
     private int currentIndex = 0;
     private void Awake()
     {
@@ -18,7 +21,6 @@ public class Intro : MonoBehaviour
 
     private void ChangeSlide()
     {
-        Debug.Log(currentIndex + "  " +  slides.Count);
         source.Play();
         if (currentIndex >= slides.Count)
         {
@@ -26,6 +28,7 @@ public class Intro : MonoBehaviour
             return;
         }
         current.sprite = slides[currentIndex];
+        desc.text = texts[currentIndex];
         currentIndex++;
     }
 }
