@@ -11385,7 +11385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 100
-  MaxDamage: 10
+  MaxDamage: 100
   IsDead: 0
   m_NoDamage: 0
   LastDamageDirection: {x: 0, y: 0, z: 0}
@@ -11503,6 +11503,11 @@ PrefabInstance:
       propertyPath: m_Owner
       value: 
       objectReference: {fileID: 9180820861068994198}
+    - target: {fileID: 4288834026685758845, guid: 0539de59fc8e13b449e42159f1bee771,
+        type: 3}
+      propertyPath: CostPerShot
+      value: 33
+      objectReference: {fileID: 0}
     - target: {fileID: 4288834026685758845, guid: 0539de59fc8e13b449e42159f1bee771,
         type: 3}
       propertyPath: m_FirePoint
