@@ -31,6 +31,7 @@ namespace Shooter.UI
 
         //public DamageVignette vignette;
         public Image vignette;
+        public Animator heartAnimator;
         public static UI_HUD m_Main;
 
 
@@ -119,6 +120,10 @@ namespace Shooter.UI
 
         }
 
+        public void StartPulse()
+        {
+            heartAnimator.SetTrigger("StartPulse");
+        }
         //public void ShowBossHealth()
         //{
         //    m_BossHealthBase.gameObject.SetActive(true);
