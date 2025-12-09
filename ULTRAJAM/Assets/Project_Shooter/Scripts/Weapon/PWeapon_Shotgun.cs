@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Shooter.UI;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -115,8 +116,10 @@ namespace Shooter.Gameplay
             if (CameraControl.m_Current != null)
             {
                 // Параметры: (Длительность = 0.2 сек, Интенсивность = 0.4)
-                CameraControl.m_Current.StartShake(0.25f, 0.8f); 
+                CameraControl.m_Current.StartShake(0.25f, 0.6f); 
             }
+            
+            UI_HUD.m_Main.StartPulse();
         }
         
     }
