@@ -463,6 +463,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1549439674}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1290054573 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2351543966036254069, guid: aae42177b0651744298d8d2d7510d6db,
+    type: 3}
+  m_PrefabInstance: {fileID: 1485869623}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1478015098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -614,6 +620,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7009428221368729627, guid: aae42177b0651744298d8d2d7510d6db,
+        type: 3}
+      propertyPath: heartAnimator
+      value: 
+      objectReference: {fileID: 1290054573}
     - target: {fileID: 7009428221368729629, guid: aae42177b0651744298d8d2d7510d6db,
         type: 3}
       propertyPath: m_Name

@@ -54,8 +54,7 @@ namespace Shooter.Gameplay
         {
             CountOfKills++;
             Debug.Log(CountOfKills);
-            if (enemies.Contains(enemy))
-           
+            if (enemies.Contains(enemy)) 
                 enemies.Remove(enemy);
         }
 
