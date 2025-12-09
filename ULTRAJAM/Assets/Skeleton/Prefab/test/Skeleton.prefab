@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c0e8ec4be6a4d554881a5c8bb6d0c0cf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: c0e8ec4be6a4d554881a5c8bb6d0c0cf,
         type: 3}
       propertyPath: m_Controller
@@ -84,6 +89,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1468259714351777461}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c0e8ec4be6a4d554881a5c8bb6d0c0cf,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8780043650076991242}
   m_SourcePrefab: {fileID: 100100000, guid: c0e8ec4be6a4d554881a5c8bb6d0c0cf, type: 3}
 --- !u!1 &2421781781477124904 stripped
 GameObject:
@@ -103,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e52197de12755d548a9698dd53ddcdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 100
+  maxHp: 1
   Prefab: {fileID: 2421781781477124904}
   distanceToAttack: 10
   speed: 5
@@ -135,7 +144,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1.62, z: 1}
-  m_Center: {x: 0, y: 0.97, z: 0}
+  m_Center: {x: 0, y: 0.81, z: 0}
 --- !u!54 &1468259714351777461
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -163,3 +172,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &8780043650076991242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2421781781477124904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0809dd1c0f1ba4885320eba1b0bc71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 100
+  MaxDamage: 1
+  IsDead: 0
+  m_NoDamage: 0
+  LastDamageDirection: {x: 0, y: 0, z: 0}
+  LastDamageFactor: 1
+  DamageShakeAmount: 0
+  DamageShakeAngle: 0
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
