@@ -73,6 +73,7 @@ namespace Shooter.Gameplay
             if (IsDead) return;
 
             IsDead = true;
+            var distanceToPlayer = Vector3.Distance(transform.position, PlayerTarget.position);
 
             Debug.Log($"HandleDeath вызван в {this}");
             var obj = Instantiate(DeathParticlePrefab);

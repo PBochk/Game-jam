@@ -69,8 +69,22 @@ namespace Shooter.Gameplay
                 Damage = 0;
                 IsDead = true;
             }
-            Debug.Log("OnDamaged.Invoke()");
             OnDamaged.Invoke();
+            StartCoroutine(Co_HitGlow());
+        }
+
+        public void ApplyDamageNoShake(float dmg)
+        {
+            
+            if (m_NoDamage || IsDead)
+                return;
+            Damage -= dmg;
+            if (Damage <= 0)
+            {
+                Damage = 0;
+                IsDead = true;
+            }
+            //OnDamaged.Invoke();
             StartCoroutine(Co_HitGlow());
         }
 
