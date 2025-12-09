@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="31067f34-3063-4277-9a29-7099b29df88a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MotorcycleScene/Prefabs/Dummy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MotorcycleScene/Prefabs/Dummy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MotorcycleScene/Scripts/Dummy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MotorcycleScene/Scripts/Dummy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765270687086</updated>
-      <workItem from="1765270687088" duration="42717000" />
+      <workItem from="1765270687088" duration="44438000" />
     </task>
     <task id="LOCAL-00001" summary="Player movement revork">
       <option name="closed" value="true" />
@@ -231,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765319297168</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="dummies rework">
+      <option name="closed" value="true" />
+      <created>1765320736588</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1765320736588</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +255,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -270,7 +287,8 @@
     <MESSAGE value="reload indicator" />
     <MESSAGE value="Motorcycle scene with cube" />
     <MESSAGE value="crowd on the bike scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="crowd on the bike scene" />
+    <MESSAGE value="dummies rework" />
+    <option name="LAST_COMMIT_MESSAGE" value="dummies rework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
