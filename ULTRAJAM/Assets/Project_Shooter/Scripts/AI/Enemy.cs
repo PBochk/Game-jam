@@ -46,7 +46,6 @@ namespace Shooter.Gameplay
         public Animator m_Animator;
 
         public int m_ItemDropCount = 1;
-        // Start is called before the first frame update
         void Start()
         {
             m_CanDamage = true;
@@ -60,7 +59,6 @@ namespace Shooter.Gameplay
 
         }
 
-        // Update is called once per frame
         void Update()
         {
             //AI

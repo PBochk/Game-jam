@@ -9,19 +9,14 @@ namespace Shooter.Gameplay
         public GameObject m_FireParticlePrefab1;
 
         public float m_WalkDistance = 3;
-        // Start is called before the first frame update
         void Start()
         {
             InitPosition = transform.position;
-            
-            
         }
 
-        // Update is called once per frame
         void Update()
         {
             CheckAlert();
-
             HandleFacePlayer();
             HandleDeath();
         }
@@ -29,7 +24,6 @@ namespace Shooter.Gameplay
         public override void StartAlert()
         {
             base.StartAlert();
-
             StartCoroutine(Co_EnterLevel());
         }
 
