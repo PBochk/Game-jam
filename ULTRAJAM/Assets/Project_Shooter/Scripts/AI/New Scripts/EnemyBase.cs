@@ -9,7 +9,7 @@ namespace Shooter.Gameplay
         [SerializeField] private int maxHp = 100;
         private int currentHp = 100;
         [SerializeField] private GameObject Prefab;
-        [SerializeField] private GameObject PlayerTarget;
+        private Transform PlayerTarget;
         [SerializeField] private float distanceToAttack;
         [SerializeField] private float speed;
         [SerializeField] private float attackSpeed;
@@ -34,6 +34,10 @@ namespace Shooter.Gameplay
             RigidBody = GetComponent<Rigidbody>();
             //DamageControl = GetComponent<DamageControl>();
         }
+        public void Start()
+        {
+            PlayerTarget = PlayerControl.MainPlayerController.MyPlayerChar.transform; 
+        }
 
         void FixedUpdate()
         {
@@ -44,15 +48,16 @@ namespace Shooter.Gameplay
                 return;
             }
 
-            var playerPosition = PlayerTarget.transform.position;
+            var playerPosition = PlayerTarget.position;
             var myPosition = transform.position;
-            var distanceToPlayer = Vector3.Distance(transform.position, PlayerTarget.transform.position);
+            var distanceToPlayer = Vector3.Distance(transform.position, PlayerTarget.position);
             Debug.Log(distanceToPlayer);
             if (distanceToPlayer > distanceToAttack)
             {
                 Move();
                 RotateTowardsPlayer();
             }
+
             else
             {
                 StopMovement();
@@ -85,10 +90,10 @@ namespace Shooter.Gameplay
         {
             isMoving = true;
 
-            var direction = (PlayerTarget.transform.position - transform.position).normalized;
+            var direction = (PlayerTarget.position - transform.position).normalized;
             direction.y = 0;
 
-            var distanceToPlayer = Vector3.Distance(transform.position, PlayerTarget.transform.position);
+            var distanceToPlayer = Vector3.Distance(transform.position, PlayerTarget.position);
             var approachSpeed = speed;
             if (distanceToPlayer < distanceToAttack + 2f)
                 approachSpeed *= Mathf.Clamp01((distanceToPlayer - distanceToAttack) / 2f);
@@ -102,7 +107,7 @@ namespace Shooter.Gameplay
 
         private void RotateTowardsPlayer()
         {
-            var direction = PlayerTarget.transform.position - transform.position;
+            var direction = PlayerTarget.position - transform.position;
             direction.y = 0;
 
             if (direction.magnitude > 0.1f)

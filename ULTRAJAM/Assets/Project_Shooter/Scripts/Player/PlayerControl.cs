@@ -115,10 +115,7 @@ namespace Shooter.Gameplay
             //GameControl.MainGameControl.PlayerControls.Add(this);
             MainPlayerController = this;
             //m_Inventory = GetComponent<PlayerInvetory>();
-        }
 
-        void Start()
-        {
             InputEnable = true;
             //Cursor.lockState = CursorLockMode.Locked;
 
@@ -165,6 +162,11 @@ namespace Shooter.Gameplay
             InputEnable = true;
             m_IsOnFoot = true;
             Respawn();
+        }
+
+        void Start()
+        {
+
         }
 
         // Update is called once per frame
