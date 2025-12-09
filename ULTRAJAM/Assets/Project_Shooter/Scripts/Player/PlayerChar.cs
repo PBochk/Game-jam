@@ -78,6 +78,9 @@ namespace Shooter.Gameplay
         [SerializeField]
         public float MaxSpeed = 100f;
 
+        [SerializeField] public float DotDamage = 1f;
+        [SerializeField] public float DotDelaySeconds = 0.25f;
+
         void Awake()
         {
             m_Current = this;
@@ -99,6 +102,16 @@ namespace Shooter.Gameplay
             m_WeaponPowerParticle.SetActive(false);
             //Cursor.lockState = CursorLockMode.Locked;
             SetWeapon(1);
+            StartCoroutine(Co_Dot());
+        }
+
+        private IEnumerator Co_Dot()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(DotDelaySeconds);
+                m_DamageControl.ApplyDamage(DotDamage, transform.forward, 1f);
+            }
         }
 
         // Update is called once per frame
