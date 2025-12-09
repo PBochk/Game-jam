@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Shooter.Gameplay
 {
@@ -15,9 +16,14 @@ namespace Shooter.Gameplay
         public int CurrentEnemiesCount;
         public List<GameObject> enemies;
 
-
+        public UnityEvent<GameObject> OnEnemySpawned;
+        public UnityEvent<GameObject> OnEnemyDestroyed;
         public void Update()
         {
+            enemies.RemoveAll(enemy => enemy is null);
+            CurrentEnemiesCount = enemies.Count;
+
+
             if (!isCanSpawn)
                 return;
 
@@ -36,6 +42,9 @@ namespace Shooter.Gameplay
                 enemies.Add(spawnedEnemy);
                 var tracker = spawnedEnemy.AddComponent<EnemyTracker>();
                 tracker.OnEnemyDestroyed += () => RemoveEnemy(spawnedEnemy);
+
+
+
                 yield return new WaitForSeconds(2);
             }
         }
