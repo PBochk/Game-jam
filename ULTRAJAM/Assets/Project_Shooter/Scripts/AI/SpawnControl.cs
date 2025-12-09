@@ -1,121 +1,47 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace Shooter.Gameplay
 {
     public class SpawnControl : MonoBehaviour
     {
-        private bool m_DelayingSpawn = true;
+        [SerializeField] private List<GameObject> enemyPrefabs;
+        [SerializeField] private GameObject player;
+        [SerializeField] private int MaxEnemiesCount;
+        [SerializeField] private int MinEnemiesCount;
+        [SerializeField] private List<SpawnerPoint> spawnPoints;
+        public bool isCanSpawn = true;
+        public int CurrentEnemiesCount;
+        public List<GameObject> enemies;
 
-        public GameObject[] m_EnemyPrefabs;
-        [HideInInspector]
-        public GameObject[] m_SpawnPoints;
-
-
-        [HideInInspector]
-        public List<GameObject> m_Enemies;
-
-        [HideInInspector]
-        public int SpawnCounter = 0;
-        [HideInInspector]
-        public int TotalSpawnCount = 0;
-        [HideInInspector]
-        public int CurrentEnemyCount = 0;
-        [HideInInspector]
-        public bool KeepSpawnning = true;
-        [HideInInspector]
-        public int TotalKillCount = 0;
-
-        public static SpawnControl Current;
-
-        int m_SpawnPointNumber = 0;
-
-
-        void Awake()
+        public void Awake()
         {
-            Current = this;
-            m_Enemies = new List<GameObject>();
-
-            GameObject[] objs = GameObject.FindGameObjectsWithTag("SpawnPoint");
-            m_SpawnPoints = objs;
-        }
-        // Start is called before the first frame update
-        void Start()
-        {
-            m_DelayingSpawn = false;
-            SpawnCounter = 0;
-            CurrentEnemyCount = 0;
-            KeepSpawnning = true;
-            TotalSpawnCount = 20;
-
-
+            object value = Random.Range(1, 5);
         }
 
-        // Update is called once per frame
-        void Update()
+        public void Update()
         {
-            if (KeepSpawnning)
+            if (!isCanSpawn)
+                return;
+
+            if (enemies.Count <= 0)
             {
-                if (CurrentEnemyCount < 100)
-                {
-                    if (!m_DelayingSpawn)
-                    {
-                        Transform CurrentSpawnPoint = m_SpawnPoints[m_SpawnPointNumber].transform;
-                        if (Vector3.Distance(CurrentSpawnPoint.position, PlayerChar.m_Current.transform.position) <= 30)
-                        {
-                            m_SpawnPointNumber++;
-                        }
-                        else
-                        {
-                            int enemyNumber = 0;
-
-                            GameObject obj = Instantiate(m_EnemyPrefabs[enemyNumber]);
-                            Vector3 pos = m_SpawnPoints[m_SpawnPointNumber].transform.position;
-                            pos.y = 1;
-                            obj.transform.position = pos;
-                            AddEnemy();
-                            //SpawnCounter++;
-
-                            m_DelayingSpawn = true;
-
-                            if (SpawnCounter >= TotalSpawnCount)
-                            {
-                                KeepSpawnning = false;
-                                //trigger event
-                            }
-                            else
-                            {
-                                Invoke("EnableCanSpawnEnemy", .05f);
-                            }
-
-                            m_SpawnPointNumber++;
-                        }
-                        
-                        if (m_SpawnPointNumber>m_SpawnPoints.Length-1)
-                        {
-                            m_SpawnPointNumber = 0;
-                        }
-                        
-                    }
-                }
+                StartCoroutine(FillEnemiesList(Random.Range(MinEnemiesCount, MaxEnemiesCount)));
             }
-
         }
 
-        private void EnableCanSpawnEnemy()
+        private IEnumerator FillEnemiesList(int enemiesInWave)
         {
-            m_DelayingSpawn = false;
+            for (var i = 0; i < enemiesInWave; i++)
+            {
+                enemies.Add(
+                    spawnPoints[Random.Range(0, spawnPoints.Count - 1)]
+                    .SpawnEnemy(enemyPrefabs[Random.Range(0, enemyPrefabs.Count - 1)])
+                    );
+                yield return new WaitForSeconds(2);
+            }
         }
-
-        public void AddEnemy()
-        {
-            CurrentEnemyCount++;
-        }
-
-        public void RemoveEnemy()
-        {
-            CurrentEnemyCount--;
-            TotalKillCount++;
-        }
+        
     }
 }
