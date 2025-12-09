@@ -8,7 +8,6 @@ namespace Shooter.UI
 {
     public class UI_HUD : MonoBehaviour
     {
-        public Image m_DamageOverlay;
         public Text[] m_PlayerTexts_1;
         public Text m_GemCountText;
         public Text m_GunNameText;
@@ -30,22 +29,26 @@ namespace Shooter.UI
 
         public string[] m_WeaponNames = new string[4] { "PISTOL", "SHOTGUN", "MACHINGUN", "PLASMA GUN" };
 
+        //public DamageVignette vignette;
+        public Image vignette;
         public static UI_HUD m_Main;
+
 
         void Awake()
         {
+            HideBossHealth();
             m_Main = this;
         }
         // Start is called before the first frame update
         void Start()
         {
             //Cursor.visible = false;
-            m_BossHealthBase.gameObject.SetActive(false);
         }
 
         // Update is called once per frame
         void Update()
         {
+            if (PlayerChar.m_Current == null) return; 
             m_GemCountText.text = PlayerControl.MainPlayerController.m_GemCount.ToString();
 
             if (PlayerChar.m_Current.m_TempTarget != null)
@@ -73,7 +76,13 @@ namespace Shooter.UI
 
             DamageControl damage = PlayerChar.m_Current.GetComponent<DamageControl>();
             m_PlayerHealth.fillAmount = damage.Damage / damage.MaxDamage;
+            
 
+
+            Color color = vignette.color;
+            color.a = 1 - damage.Damage / damage.MaxDamage;
+            vignette.color = color;
+            
 
             m_GunNameText.text = m_WeaponNames[PlayerChar.m_Current.m_WeaponNum];
 
