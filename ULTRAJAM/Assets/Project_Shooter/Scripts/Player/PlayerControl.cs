@@ -252,25 +252,25 @@ namespace Shooter.Gameplay
             cameraForward.Normalize();
             Vector3 cameraRight = Helper.RotatedVector(90, cameraForward);
 
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.W))
             {
                 m_Input_Movement += cameraForward;
             }
-            else if (Input.GetKey(KeyCode.DownArrow))
+            else if (Input.GetKey(KeyCode.S))
             {
                 m_Input_Movement -= cameraForward;
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.A))
             {
                 m_Input_Movement -= cameraRight;
             }
-            else if (Input.GetKey(KeyCode.RightArrow))
+            else if (Input.GetKey(KeyCode.D))
             {
                 m_Input_Movement += cameraRight;
             }
 
-            if (Input.GetKey(KeyCode.Z))
+            if (Input.GetMouseButton(0))
             {
                 Input_FireHold = true;
             }
@@ -343,7 +343,7 @@ namespace Shooter.Gameplay
             //    m_CameraAngle.x += 500 * Time.deltaTime;
             //}
 
-            //AimPosition += 200 * Time.deltaTime * reticleMove;
+            //imPosition += 200 * Time.deltaTime * reticleMove;
             //AimPosition = Vector3.ClampMagnitude(AimPosition, 20);
             //AimPosition.y = 2;
 
@@ -354,6 +354,7 @@ namespace Shooter.Gameplay
             m_AimPointTransofrm.position = AimPosition;
             ReticlePosition = m_AimPointTransofrm.position;
         }
+
         public void Kill()
         {
             m_IsDead = true;
@@ -386,15 +387,15 @@ namespace Shooter.Gameplay
             GameObject obj = Instantiate(PlayerPrefab1);
             MyPlayerChar = obj.GetComponent<PlayerChar>();
 
-            if (GameControl.m_Current.m_MainSaveData.m_CheckpointNumber == 0)
-            {
-                MyPlayerChar.transform.position = m_SpawnPoint.position + new Vector3(0, .1f, 0);
-            }
-            else
-            {
-                int num = GameControl.m_Current.m_MainSaveData.m_CheckpointNumber - 1;
-                MyPlayerChar.transform.position = CheckpointControl.m_Main.m_Checkpoints[num].m_SpawnPoint.position;
-            }
+            //if (GameControl.m_Current.m_MainSaveData.m_CheckpointNumber == 0)
+            //{
+            //    MyPlayerChar.transform.position = m_SpawnPoint.position + new Vector3(0, .1f, 0);
+            //}
+            //else
+            //{
+            //    int num = GameControl.m_Current.m_MainSaveData.m_CheckpointNumber - 1;
+            //    MyPlayerChar.transform.position = CheckpointControl.m_Main.m_Checkpoints[num].m_SpawnPoint.position;
+            //}
 
             //GameObject obj1 = Instantiate(PlayerPlanePrefab1);
             //MyPlayerPlane = obj1;
