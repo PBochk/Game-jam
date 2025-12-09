@@ -1,26 +1,25 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class TopDownBikeController3D : MonoBehaviour
+public class BikeController : MonoBehaviour
 {
     [Header("References")]
-    public Transform model; // сюда перетащить дочерний объект Model
+    public Transform model; // дочерняя модель байка
 
     [Header("Movement")]
-    public float maxSpeed = 8f;
-    public float acceleration = 10f;
+    public float maxSpeed = 10f;
+    public float acceleration = 12f;
 
     [Header("Rotation")]
-    public float rotationDelay = 6f;
+    public float rotationSpeed = 8f;
     public float maxLeanAngle = 20f;
     public float leanSpeed = 6f;
 
-    private float currentSpeed = 0f;
-    private float currentLean = 0f;
-
     private Rigidbody rb;
     private Camera mainCam;
-    private float currentYRotation;
+
+    private float currentSpeed;
+    private float currentLean;
 
     void Start()
     {
@@ -33,8 +32,8 @@ public class TopDownBikeController3D : MonoBehaviour
 
     void Update()
     {
-        HandleAcceleration();
         RotateToMouse();
+        HandleAcceleration();
     }
 
     void FixedUpdate()
@@ -45,47 +44,42 @@ public class TopDownBikeController3D : MonoBehaviour
     void RotateToMouse()
     {
         Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
-        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+        Plane plane = new Plane(Vector3.up, Vector3.zero);
 
-        if (!groundPlane.Raycast(ray, out float distance)) 
+        if (!plane.Raycast(ray, out float dist))
             return;
 
-        Vector3 point = ray.GetPoint(distance);
-        Vector3 dir = point - transform.position;
+        Vector3 hitPoint = ray.GetPoint(dist);
+        Vector3 dir = hitPoint - transform.position;
         dir.y = 0f;
 
         if (dir.sqrMagnitude < 0.001f)
             return;
 
-        // целевой поворот ТОЛЬКО по Y
         Quaternion targetRot = Quaternion.LookRotation(dir);
+
+        // Поворот только по Y
         transform.rotation = Quaternion.Slerp(
             transform.rotation,
             targetRot,
-            Time.deltaTime * rotationDelay
+            Time.deltaTime * rotationSpeed
         );
 
-        // угол для наклона
-        float angleDiff = Vector3.SignedAngle(transform.forward, dir, Vector3.up);
+        // Расчёт наклона (визуального)
+        float angle = Vector3.SignedAngle(transform.forward, dir, Vector3.up);
+        float targetLean = Mathf.Clamp(-angle, -maxLeanAngle, maxLeanAngle);
+        currentLean = Mathf.Lerp(currentLean, targetLean, Time.deltaTime * leanSpeed);
 
-        float targetLean = Mathf.Clamp(angleDiff, -maxLeanAngle, maxLeanAngle);
-        currentLean = Mathf.Lerp(currentLean, -targetLean, Time.deltaTime * leanSpeed);
-
-        // Наклоняем ТОЛЬКО модель (локальная ось X — как "мотоцикл")
+        // Наклоняем ТОЛЬКО модель
         if (model != null)
         {
-            Vector3 e = model.localEulerAngles;
-            e.z = currentLean; // currentLean — в градусах
-            model.localEulerAngles = e;
+            model.localRotation = Quaternion.Euler(0f, 0f, currentLean);
         }
     }
 
     void HandleAcceleration()
     {
-        if (Input.GetKey(KeyCode.W))
             currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
-        else
-            currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, acceleration * Time.deltaTime);
     }
 
     void Move()
