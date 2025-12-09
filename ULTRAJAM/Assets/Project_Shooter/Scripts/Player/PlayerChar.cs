@@ -110,7 +110,7 @@ namespace Shooter.Gameplay
             while (true)
             {
                 yield return new WaitForSeconds(DotDelaySeconds);
-                m_DamageControl.ApplyDamage(DotDamage, transform.forward, 1f);
+                m_DamageControl.ApplyDamageNoShake(DotDamage);
             }
         }
 

@@ -11372,6 +11372,8 @@ MonoBehaviour:
   m_ShieldObject: {fileID: 7055559785765243090}
   MoveSpeed: 10
   MaxSpeed: 20
+  DotDamage: 1
+  DotDelaySeconds: 0.25
 --- !u!114 &6243425237513417537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11513,6 +11515,12 @@ PrefabInstance:
       propertyPath: m_FirePoint
       value: 
       objectReference: {fileID: 4095636431773020976}
+    - target: {fileID: 4288834026685758845, guid: 0539de59fc8e13b449e42159f1bee771,
+        type: 3}
+      propertyPath: EffectPrefab
+      value: 
+      objectReference: {fileID: 2787556212050310887, guid: 57970c6bb711ec24b8d98424b1806f3b,
+        type: 3}
     - target: {fileID: 4288834026685758845, guid: 0539de59fc8e13b449e42159f1bee771,
         type: 3}
       propertyPath: m_ParticlePoint
