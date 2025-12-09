@@ -119,7 +119,8 @@ MonoBehaviour:
   attackSpeed: 2
   RigidBody: {fileID: 1969110636511566175}
   Damage: 10
-  DeathParticlePrefab: {fileID: 0}
+  DeathParticlePrefab: {fileID: 7131295369910517025, guid: 9c5a8cf448f58444abb5cea841a26894,
+    type: 3}
   IsDead: 0
   nAlerted: 0
   Animator: {fileID: 5866666021909216657, guid: c0e8ec4be6a4d554881a5c8bb6d0c0cf,

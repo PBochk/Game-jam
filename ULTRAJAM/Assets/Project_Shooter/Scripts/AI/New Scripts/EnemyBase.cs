@@ -75,9 +75,11 @@ namespace Shooter.Gameplay
             IsDead = true;
 
             Debug.Log($"HandleDeath вызван в {this}");
-            //var obj = Instantiate(DeathParticlePrefab);
-            //obj.transform.position = transform.position;
-            //Destroy(obj, 3);
+            var obj = Instantiate(DeathParticlePrefab);
+            obj.transform.position = transform.position;
+            var pr = obj.GetComponent<ParticleSystem>();
+            pr.Play();
+            Destroy(obj, 3);
             Destroy(gameObject);
         }
 
@@ -126,66 +128,10 @@ namespace Shooter.Gameplay
             }
         }
 
-        //public virtual void HandleFacePlayer()
-        //{
-        //    if (m_FacePlayer)
-        //    {
-        //        Vector3 dir = PlayerChar.m_Current.transform.position - transform.position;
-        //        dir.y = 0;
-
-        //        dir.Normalize();
-        //        m_RotationBase.rotation = Quaternion.Lerp(m_RotationBase.rotation, Quaternion.LookRotation(dir), 10 * Time.deltaTime);
-        //    }
-        //}
-
-
-        //public virtual void DropItem(int count)
-        //{
-        //    for (int i = 0; i < count; i++)
-        //    {
-        //        GameObject obj1 = Instantiate(m_ItemPrefabs[0]);
-        //        obj1.transform.position = transform.position;
-        //        obj1.GetComponent<Rigidbody>().linearVelocity = new Vector3(Random.Range(-5, 5), Random.Range(10, 20), Random.Range(-5, 5));
-        //        obj1.GetComponent<Rigidbody>().angularVelocity = new Vector3(Random.Range(-20, 20), Random.Range(-20, 20), Random.Range(-20, 20));
-        //    }
-        //}
-
-        //public virtual void CheckAlert()
-        //{
-        //    if (!m_Alerted)
-        //    {
-        //        if (CameraControl.m_Current.m_CameraTopPosition.z > transform.position.z - 5f)
-        //        {
-        //            StartAlert();
-        //        }
-
-        //    }
-        //}
-        //public virtual void StartAlert()
-        //{
-        //    m_Alerted = true;
-
-        //}
-
-        //public void AllowDamage()
-        //{
-        //    m_CanDamage = true;
-        //}
-
-
-
-        public virtual void EnableEnemy()
-        {
-
-        }
 
         void OnDrawGizmos()
         {
-
             Gizmos.color = Color.red;
-            //Gizmos.DrawLine(transform.position,MoveTargetPosition + new Vector3(0, 0.2f, 0));
-            //Gizmos.DrawSphere(MoveTargetPosition, .5f);
-
         }
     }
 
