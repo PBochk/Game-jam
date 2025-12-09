@@ -98,6 +98,7 @@ namespace Shooter.Gameplay
             m_ShieldObject.transform.SetParent(null);
             m_WeaponPowerParticle.SetActive(false);
             //Cursor.lockState = CursorLockMode.Locked;
+            SetWeapon(1);
         }
 
         // Update is called once per frame
