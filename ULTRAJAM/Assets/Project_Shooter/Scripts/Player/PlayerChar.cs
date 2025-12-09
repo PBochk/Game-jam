@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 namespace Shooter.Gameplay
 {
@@ -71,6 +72,12 @@ namespace Shooter.Gameplay
 
         public GameObject m_ShieldObject;
 
+        [Header("Custom parameters")]
+        [SerializeField]
+        public float MoveSpeed = 5f;
+        [SerializeField]
+        public float MaxSpeed = 100f;
+
         void Awake()
         {
             m_Current = this;
@@ -82,7 +89,6 @@ namespace Shooter.Gameplay
             m_DamageControl = GetComponent<DamageControl>();
             m_DamageControl.OnDamaged.AddListener(HandleDamage);
             m_InControl = true;
-
 
             //m_MyWeaponControl.m_MyPlayer = this;
 
@@ -128,10 +134,11 @@ namespace Shooter.Gameplay
                     }
                 }
 
-                //if (Input.GetKeyDown(KeyCode.C))
-                //{
-                //    CheckMelleeAttack();
-                //}
+                if (Input.GetKeyDown(KeyCode.C))
+                {
+                    CheckMelleeAttack();
+                
+                }
 
                 //if (Input.GetKeyDown(KeyCode.V))
                 //{
@@ -148,10 +155,10 @@ namespace Shooter.Gameplay
 
                 m_MovementInput = PlayerControl.MainPlayerController.m_Input_Movement;
 
-                //if (Input.GetMouseButtonDown(1))
-                //{
-                //    StartDash();
-                //}
+                if (Input.GetKeyDown(KeyCode.LeftShift))
+                {
+                    StartDash();
+                }
 
                 Vector3 axis = Vector3.Cross(Vector3.up, m_MovementInput);
                 Quaternion newRotation = Quaternion.AngleAxis(20, axis);
@@ -219,14 +226,16 @@ namespace Shooter.Gameplay
                 //else
                 //{
                 //m_LockedTarget = null;
-                if (m_MovementInput != Vector3.zero)
+                
+                Vector3 faceDirection = PlayerControl.MainPlayerController.ReticlePosition - transform.position;
+                faceDirection.y = 0;
+                //faceDirection.Normalize();
+                if (faceDirection.sqrMagnitude > 0.001f)
                 {
-                    Vector3 faceDirection = m_MovementInput;
-                    faceDirection.y = 0;
-                    faceDirection.Normalize();
-                    m_TurnBase.rotation = Quaternion.Lerp(m_TurnBase.rotation, Quaternion.LookRotation(faceDirection), 10 * Time.deltaTime);
-                }
-                //}
+                    Quaternion targetRotation = Quaternion.LookRotation(faceDirection);
+
+                    m_TurnBase.rotation = targetRotation;
+                } 
 
                 m_Weapons[m_WeaponNum].Input_FireHold = m_Input_Fire;
 
@@ -274,9 +283,9 @@ namespace Shooter.Gameplay
             Vector3 totalVelocity = rigidBody.linearVelocity;
             if (m_MovementInput != Vector3.zero)
             {
-                totalVelocity += 5 * m_MovementInput;
+                totalVelocity += MoveSpeed * m_MovementInput;
                 totalVelocity.y = 0;
-                totalVelocity = Vector3.ClampMagnitude(totalVelocity, 11);
+                totalVelocity = Vector3.ClampMagnitude(totalVelocity, MaxSpeed);
                 totalVelocity.y = rigidBody.linearVelocity.y;
                 rigidBody.linearVelocity = totalVelocity;
             }
@@ -321,7 +330,7 @@ namespace Shooter.Gameplay
                 {
                     //Rigidbody rb = col.gameObject.GetComponent<Rigidbody>();
                     //if (rb != null)
-                    //{
+                   //{
                     //    Vector3 dir = col.gameObject.transform.position - transform.position;
                     //    dir.Normalize();
                     //    rb.AddForceAtPosition(3000 * dir, col.gameObject.transform.position);
@@ -334,7 +343,21 @@ namespace Shooter.Gameplay
                         d.ApplyDamage(1, transform.forward, 1);
                     }
                 }
+                else if (col.TryGetComponent<Projectile_Base>(out var projectile))
+                {
+                    Debug.Log(projectile);
+                    Parry(projectile);
+                }
             }
+        }
+
+        private void Parry(Projectile_Base projectile)
+        {
+            if (projectile.Creator == gameObject) return;
+            if (!projectile.TryGetComponent<ProjectileMovement>(out var movement)) return;
+            movement.m_TurnSpeed = 0;
+            movement.transform.forward = transform.forward;
+            projectile.Creator = gameObject;
         }
 
         public void AddAmmo(int count)
