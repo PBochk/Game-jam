@@ -53,12 +53,12 @@ namespace Shooter.Gameplay
 
             if (playerDC != null)
             {
-                var damage = MathF.Min(CostPerShot, playerDC.Damage - 1);
+                var damageToSelf = MathF.Min(CostPerShot, playerDC.Damage - 2);
                 // Наносим урон себе:
                 playerDC.ApplyDamage(
-                    CostPerShot, // Стоимость
+                    damageToSelf, // Стоимость
                     m_Owner.transform.forward, // Направление (любое, так как урон себе)
-                    CostPerShot); // Damage Factor
+                    damageToSelf); // Damage Factor
             }
             
             GameObject obj;
