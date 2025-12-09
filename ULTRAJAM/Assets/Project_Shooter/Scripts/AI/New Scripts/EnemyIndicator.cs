@@ -11,6 +11,7 @@ namespace Shooter.Gameplay
 
         private Camera mainCamera;
         private Canvas parentCanvas;
+        private float margin = 50f;
 
         void Awake()
         {
@@ -29,6 +30,11 @@ namespace Shooter.Gameplay
             targetEnemy = enemy;
         }
 
+        public void SetMargin(float newMargin)
+        {
+            margin = newMargin;
+        }
+
         public void Update()
         {
             if (targetEnemy == null)
@@ -36,6 +42,10 @@ namespace Shooter.Gameplay
                 gameObject.SetActive(false);
                 return;
             }
+            if (Camera.main == null)
+                return;
+
+            mainCamera = Camera.main;
 
             UpdateIndicatorPosition();
         }
@@ -69,6 +79,9 @@ namespace Shooter.Gameplay
                 screenPoint.x * Screen.width,
                 screenPoint.y * Screen.height
             );
+
+            screenPos.x = Mathf.Clamp(screenPos.x, margin, Screen.width - margin);
+            screenPos.y = Mathf.Clamp(screenPos.y, margin, Screen.height - margin);
 
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 (RectTransform)parentCanvas.transform,

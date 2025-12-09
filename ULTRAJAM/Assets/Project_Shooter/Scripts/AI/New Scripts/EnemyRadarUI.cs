@@ -17,26 +17,16 @@ namespace Shooter.Gameplay
         {
             InitializePool();
             spawnControl = FindAnyObjectByType<SpawnControl>();
-        }
 
-
-        void Update()
-        {
-            UpdateIndicators();
-        }
-
-        private void InitializePool()
-        {
-            for (int i = 0; i < maxIndicators; i++)
+            if (spawnControl != null)
             {
-                GameObject indicatorObj = Instantiate(indicatorPrefab, transform);
-                EnemyIndicator indicator = indicatorObj.GetComponent<EnemyIndicator>();
-                indicatorObj.SetActive(false);
-                indicatorPool.Add(indicator);
+                spawnControl.OnEnemySpawned.AddListener(OnEnemySpawned);
+                spawnControl.OnEnemyDestroyed.AddListener(OnEnemyDestroyed);
             }
         }
 
-        private void UpdateIndicators()
+
+        public void Update()
         {
             if (spawnControl is null || spawnControl.enemies is null)
                 return;
@@ -61,10 +51,27 @@ namespace Shooter.Gameplay
                     if (indicator != null)
                     {
                         indicator.SetTarget(enemy.transform);
+                        indicator.SetMargin(indicatorMargin);
                         indicator.gameObject.SetActive(true);
                         activeIndicators[enemy] = indicator;
                     }
+                    else
+                    {
+                        activeIndicators[enemy].SetMargin(indicatorMargin);
+                    }
                 }
+            }
+        }
+
+        private void InitializePool()
+        {
+            for (int i = 0; i < maxIndicators; i++)
+            {
+                GameObject indicatorObj = Instantiate(indicatorPrefab, transform);
+                EnemyIndicator indicator = indicatorObj.GetComponent<EnemyIndicator>();
+                indicator.SetMargin(indicatorMargin);
+                indicatorObj.SetActive(false);
+                indicatorPool.Add(indicator);
             }
         }
 
@@ -79,6 +86,7 @@ namespace Shooter.Gameplay
             {
                 var indicatorObj = Instantiate(indicatorPrefab, transform);
                 var indicator = indicatorObj.GetComponent<EnemyIndicator>();
+                indicator.SetMargin(indicatorMargin);
                 indicatorPool.Add(indicator);
                 return indicator;
             }
