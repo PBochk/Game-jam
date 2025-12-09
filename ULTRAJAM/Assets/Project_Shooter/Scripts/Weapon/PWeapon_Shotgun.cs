@@ -9,7 +9,7 @@ namespace Shooter.Gameplay
         [Header("Shotgun Custom")]
         public float m_ReloadTime = 1.5f; // Установите желаемое время перезарядки (например, 1.5 сек)
 
-        public float CostPerShot = 1f;
+        public float CostPerShot = 250f;
         private bool m_IsShooting = false;
 
         // Удаляем Start и Update из оригинального кода, т.к. они используют старую логику задержки.
@@ -55,7 +55,7 @@ namespace Shooter.Gameplay
                 playerDC.ApplyDamage(
                     CostPerShot, // Стоимость
                     m_Owner.transform.forward, // Направление (любое, так как урон себе)
-                    1.0f); // Damage Factor
+                    CostPerShot); // Damage Factor
             }
             
             GameObject obj;
