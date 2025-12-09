@@ -107,15 +107,15 @@ namespace Shooter.Gameplay
 
             // Логика создания эффекта выстрела (остается без изменений)
             obj = Instantiate(EffectPrefab);
-            obj.transform.SetParent(m_ParticlePoint);
-            obj.transform.localPosition = Vector3.zero;
+            //obj.transform.SetParent(m_ParticlePoint);
+            obj.transform.localPosition = transform.position + m_FirePoint.localPosition;
             obj.transform.forward = m_ParticlePoint.forward;
             Destroy(obj, 0.5f);
             
             if (CameraControl.m_Current != null)
             {
                 // Параметры: (Длительность = 0.2 сек, Интенсивность = 0.4)
-                CameraControl.m_Current.StartShake(0.2f, 0.7f); 
+                CameraControl.m_Current.StartShake(0.25f, 0.8f); 
             }
         }
         

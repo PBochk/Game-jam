@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="31067f34-3063-4277-9a29-7099b29df88a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Particles/Blood-Spark.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Particles/Blood-Spark.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Particles/vfx_Smoke_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Particles/vfx_Smoke_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Scenes/ArenaTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Scenes/ArenaTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Gameplay/DamageControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Gameplay/DamageControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Weapon/PWeapon_Shotgun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Weapon/PWeapon_Shotgun.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +136,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765270687086</updated>
-      <workItem from="1765270687088" duration="28913000" />
+      <workItem from="1765270687088" duration="31400000" />
     </task>
     <task id="LOCAL-00001" summary="Player movement revork">
       <option name="closed" value="true" />
@@ -188,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765303538994</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="suicide protection">
+      <option name="closed" value="true" />
+      <created>1765304208917</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1765304208917</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +236,8 @@
     <MESSAGE value="fix guitext compilation error" />
     <MESSAGE value="fix shot cost" />
     <MESSAGE value="player hp degradation and healing for damage" />
-    <option name="LAST_COMMIT_MESSAGE" value="player hp degradation and healing for damage" />
+    <MESSAGE value="suicide protection" />
+    <option name="LAST_COMMIT_MESSAGE" value="suicide protection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
