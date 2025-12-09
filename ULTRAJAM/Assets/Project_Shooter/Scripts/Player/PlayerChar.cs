@@ -164,30 +164,30 @@ namespace Shooter.Gameplay
                 Quaternion newRotation = Quaternion.AngleAxis(20, axis);
 
                 //find target
-                List<TargetObject> targets = TargetsControl.m_Main.m_Targets;
+                //List<TargetObject> targets = TargetsControl.m_Main.m_Targets;
 
                 TargetObject bestTarget = null;
                 float minAngle = 40;
-                foreach (TargetObject target in targets)
-                {
-                    if (target == null)
-                        continue;
+                //foreach (TargetObject target in targets)
+                //{
+                //    if (target == null)
+                //        continue;
 
-                    Vector3 targetPos = target.m_TargetCenter.position;
-                    Vector3 dir = targetPos - transform.position;
-                    dir.y = 0;
-                    float delta = Vector3.Angle(m_TurnBase.forward, dir);
-                    float distance = dir.magnitude;
+                //    Vector3 targetPos = target.m_TargetCenter.position;
+                //    Vector3 dir = targetPos - transform.position;
+                //    dir.y = 0;
+                //    float delta = Vector3.Angle(m_TurnBase.forward, dir);
+                //    float distance = dir.magnitude;
 
-                    if (distance > 30)
-                        continue;
+                //    if (distance > 30)
+                //        continue;
 
-                    if (delta < minAngle)
-                    {
-                        bestTarget = target;
-                        minAngle = delta;
-                    }
-                }
+                //    if (delta < minAngle)
+                //    {
+                //        bestTarget = target;
+                //        minAngle = delta;
+                //    }
+                //}
 
                 if (bestTarget != null)
                 {
