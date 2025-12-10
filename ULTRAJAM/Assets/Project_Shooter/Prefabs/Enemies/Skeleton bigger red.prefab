@@ -169,9 +169,9 @@ MonoBehaviour:
   Prefab: {fileID: 3361941984862778562}
   distanceToAttack: 2
   speed: 7
-  attackSpeed: 2
+  attackSpeed: 5
   RigidBody: {fileID: 1969110636511566175}
-  Damage: 10
+  Damage: 20
   DeathParticlePrefab: {fileID: 7131295369910517025, guid: 9c5a8cf448f58444abb5cea841a26894,
     type: 3}
   firePoint: {fileID: 0}
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 100
-  MaxDamage: 30
+  MaxDamage: 20
   IsDead: 0
   m_NoDamage: 0
   LastDamageDirection: {x: 0, y: 0, z: 0}

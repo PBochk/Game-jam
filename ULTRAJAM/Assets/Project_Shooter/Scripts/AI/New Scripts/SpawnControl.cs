@@ -18,6 +18,7 @@ namespace Shooter.Gameplay
         [SerializeField] private GameObject player;
         [SerializeField] private int MaxEnemiesCount = 15;
         [SerializeField] private int MinEnemiesCount = 5;
+        [SerializeField] private int NeedCountOfKills = 40;
         [SerializeField] private List<SpawnerPoint> spawnPoints;
 
         [SerializeField] private int[] stageKillThresholds = new int[] { 0, 10, 25 }; // Пороги убийств для стадий
@@ -43,6 +44,8 @@ namespace Shooter.Gameplay
 
         public void Update()
         {
+
+            if (CountOfKills == 40)
             enemies.RemoveAll(enemy => enemy is null);
             CurrentEnemiesCount = enemies.Count;
 
