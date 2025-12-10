@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31067f34-3063-4277-9a29-7099b29df88a" name="Changes" comment="" />
+    <list default="true" id="31067f34-3063-4277-9a29-7099b29df88a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +44,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/MotorcycleScene/Scenes/CompilationScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/Project_Shooter/Scenes/DeathScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -127,7 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1765270687086</updated>
       <workItem from="1765270687088" duration="44438000" />
-      <workItem from="1765323845930" duration="4640000" />
+      <workItem from="1765323845930" duration="5677000" />
     </task>
     <task id="LOCAL-00001" summary="Player movement revork">
       <option name="closed" value="true" />
@@ -257,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765332070439</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Plankton Moan">
+      <option name="closed" value="true" />
+      <created>1765333228144</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1765333228144</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +323,8 @@
     <MESSAGE value="compilation scene should be complete" />
     <MESSAGE value="Free bird fade in and motorcycle scene backgroung" />
     <MESSAGE value="Change to DeathScene" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change to DeathScene" />
+    <MESSAGE value="Plankton Moan" />
+    <option name="LAST_COMMIT_MESSAGE" value="Plankton Moan" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
