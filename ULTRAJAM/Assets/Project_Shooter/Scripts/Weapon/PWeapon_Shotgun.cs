@@ -121,6 +121,7 @@ namespace Shooter.Gameplay
             }
             
             UI_HUD.m_Main.StartPulse();
+            ShotSound.Play();
         }
         
     }

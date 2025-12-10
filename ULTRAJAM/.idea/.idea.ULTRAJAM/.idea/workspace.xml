@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31067f34-3063-4277-9a29-7099b29df88a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Weapon/PWeapon_Shotgun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Weapon/PWeapon_Shotgun.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +46,7 @@
     <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/MotorcycleScene/Scenes/CompilationScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/Project_Shooter/Scenes/DeathScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -133,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1765270687086</updated>
       <workItem from="1765270687088" duration="44438000" />
-      <workItem from="1765323845930" duration="6662000" />
+      <workItem from="1765323845930" duration="6868000" />
     </task>
     <task id="LOCAL-00001" summary="Player movement revork">
       <option name="closed" value="true" />
@@ -295,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765334384523</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="player sounds">
+      <option name="closed" value="true" />
+      <created>1765335036020</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1765335036020</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +360,8 @@
     <MESSAGE value="main scene music" />
     <MESSAGE value="fix sceme music" />
     <MESSAGE value="volume" />
-    <option name="LAST_COMMIT_MESSAGE" value="volume" />
+    <MESSAGE value="player sounds" />
+    <option name="LAST_COMMIT_MESSAGE" value="player sounds" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
