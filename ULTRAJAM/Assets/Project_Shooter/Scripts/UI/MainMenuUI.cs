@@ -11,10 +11,12 @@ namespace Shooter
         public SaveData m_SaveData;
         public Button startButton;
         public Button howButton;
+        public Button exitButton;
         private void Awake()
         {
             startButton.onClick.AddListener(BtnStart);
             howButton.onClick.AddListener(HowBtn);
+            exitButton.onClick.AddListener(() => Application.Quit());
         }
 
         void Start()
