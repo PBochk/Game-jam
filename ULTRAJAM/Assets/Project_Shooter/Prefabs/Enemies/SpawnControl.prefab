@@ -59,6 +59,7 @@ MonoBehaviour:
   player: {fileID: 0}
   MaxEnemiesCount: 15
   MinEnemiesCount: 20
+  NeedCountOfKills: 40
   spawnPoints:
   - {fileID: 2757177557160497666}
   - {fileID: 2471842629753593677}

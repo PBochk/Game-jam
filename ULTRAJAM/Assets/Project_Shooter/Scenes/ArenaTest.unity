@@ -753,6 +753,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7460990235348818297, guid: fb92f2edbd9ddb94ebf93d4defa64edb,
         type: 3}
+      propertyPath: NeedCountOfKills
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460990235348818297, guid: fb92f2edbd9ddb94ebf93d4defa64edb,
+        type: 3}
       propertyPath: spawnPoints.Array.size
       value: 8
       objectReference: {fileID: 0}

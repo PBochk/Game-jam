@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using static Shooter.Gameplay.SpawnControl;
 
 namespace Shooter.Gameplay
@@ -45,7 +46,8 @@ namespace Shooter.Gameplay
         public void Update()
         {
 
-            if (CountOfKills == 40)
+            if (CountOfKills == NeedCountOfKills)
+                SceneManager.LoadScene("CompilationScene");
             enemies.RemoveAll(enemy => enemy is null);
             CurrentEnemiesCount = enemies.Count;
 
