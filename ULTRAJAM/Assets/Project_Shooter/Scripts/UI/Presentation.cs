@@ -24,7 +24,7 @@ public class Intro : MonoBehaviour
         source.Play();
         if (currentIndex >= slides.Count)
         {
-            SceneManager.LoadScene("ArenaTest");
+            SceneManager.LoadScene("ARENA TOkotit");
             return;
         }
         current.sprite = slides[currentIndex];
