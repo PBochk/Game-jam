@@ -12,14 +12,16 @@ public class ButtonWithDelay : MonoBehaviour
     private void Awake()
     {
         image = GetComponent<Image>();
-        text = GetComponent<TMP_Text>();
+        text = GetComponentInChildren<TMP_Text>();
         StartCoroutine(WaitForButton());
         image.enabled = false;
+        text.enabled = false;
     }
 
     private IEnumerator WaitForButton()
     {
         yield return new WaitForSeconds(delay);
         image.enabled = true;
+        text.enabled = true;
     }
 }
