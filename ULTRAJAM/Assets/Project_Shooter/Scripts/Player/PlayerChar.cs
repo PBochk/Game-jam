@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.VFX;
 
 namespace Shooter.Gameplay
@@ -286,6 +287,7 @@ namespace Shooter.Gameplay
                     //obj.transform.forward = m_DashDirection;
                     Destroy(obj, 3);
                     gameObject.SetActive(false);
+                    SceneManager.LoadScene("DeathScene");
                 }
             }
         }
