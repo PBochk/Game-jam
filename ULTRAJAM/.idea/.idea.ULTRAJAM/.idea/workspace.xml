@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31067f34-3063-4277-9a29-7099b29df88a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/UI/BikeSceneUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/UI/BikeSceneUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/UI/EndUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/UI/EndUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1765270687086</updated>
       <workItem from="1765270687088" duration="44438000" />
-      <workItem from="1765323845930" duration="8895000" />
+      <workItem from="1765323845930" duration="9223000" />
     </task>
     <task id="LOCAL-00001" summary="Player movement revork">
       <option name="closed" value="true" />
@@ -320,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765336142159</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Music end and grass color">
+      <option name="closed" value="true" />
+      <created>1765337275160</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1765337275161</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +387,8 @@
     <MESSAGE value="player sounds" />
     <MESSAGE value="Shot sound play" />
     <MESSAGE value="Music ends when we exit menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Music ends when we exit menu" />
+    <MESSAGE value="Music end and grass color" />
+    <option name="LAST_COMMIT_MESSAGE" value="Music end and grass color" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

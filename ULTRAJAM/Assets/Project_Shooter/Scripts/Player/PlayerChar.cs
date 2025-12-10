@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.VFX;
 
@@ -82,11 +83,18 @@ namespace Shooter.Gameplay
         [SerializeField] public float DotDamage = 1f;
         [SerializeField] public float DotDelaySeconds = 0.25f;
         [SerializeField] private AudioSource DashSound;
+        private SpawnControl spawnControl;
         
         void Awake()
         {
             m_Current = this;
             m_PlayerPowers = GetComponent<PlayerPowers>();
+            spawnControl = FindFirstObjectByType<SpawnControl>();
+            spawnControl.OnStageChanged.AddListener((int stage) =>
+            {
+                if (stage == 2) DotDamage = 3;
+                else if (stage == 3) DotDamage = 5;
+            });
         }
 
         void Start()
