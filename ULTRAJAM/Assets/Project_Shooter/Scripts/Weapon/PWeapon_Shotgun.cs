@@ -14,6 +14,7 @@ namespace Shooter.Gameplay
 
         public float CostPerShot = 250f;
         private bool m_IsShooting = false;
+        [SerializeField] private AudioSource ShotSound;
 
         // Удаляем Start и Update из оригинального кода, т.к. они используют старую логику задержки.
         // Вместо них используем новую логику.
