@@ -106,8 +106,8 @@ namespace Shooter.Gameplay
         // Альтернативный метод для отслеживания через события
         public void OnEnemySpawned(GameObject enemy)
         {
-            EnemyIndicator indicator = GetIndicatorFromPool();
-            if (indicator != null)
+            var indicator = GetIndicatorFromPool();
+           if (indicator != null)
             {
                 indicator.SetTarget(enemy.transform);
                 indicator.gameObject.SetActive(true);

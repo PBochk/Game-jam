@@ -81,7 +81,8 @@ namespace Shooter.Gameplay
 
         [SerializeField] public float DotDamage = 1f;
         [SerializeField] public float DotDelaySeconds = 0.25f;
-
+        [SerializeField] private AudioSource DashSound;
+        
         void Awake()
         {
             m_Current = this;
@@ -456,6 +457,7 @@ namespace Shooter.Gameplay
             {
                 StartCoroutine(Co_Dash());
             }
+            DashSound.Play();
         }
 
         IEnumerator Co_Dash()
