@@ -844,7 +844,7 @@ PrefabInstance:
     - target: {fileID: 7460990235348818297, guid: fb92f2edbd9ddb94ebf93d4defa64edb,
         type: 3}
       propertyPath: enemyPrefabs.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7460990235348818297, guid: fb92f2edbd9ddb94ebf93d4defa64edb,
         type: 3}
@@ -867,6 +867,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3361941984862778562, guid: 07a0052ffb5ba7047a3980411c8f8536,
         type: 3}
+    - target: {fileID: 7460990235348818297, guid: fb92f2edbd9ddb94ebf93d4defa64edb,
+        type: 3}
+      propertyPath: 'enemyPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3361941984862778562, guid: 0dc6c01d35d64a04c88b6b43da1e0eda,
+        type: 3}
+    - target: {fileID: 7460990235348818297, guid: fb92f2edbd9ddb94ebf93d4defa64edb,
+        type: 3}
+      propertyPath: 'enemyPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3361941984862778562, guid: 9b90dca74cc0d774a81d6e17584aabec,
+        type: 3}
+    - target: {fileID: 7460990235348818297, guid: fb92f2edbd9ddb94ebf93d4defa64edb,
+        type: 3}
+      propertyPath: 'stageKillThresholds.Array.data[1]'
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460990235348818297, guid: fb92f2edbd9ddb94ebf93d4defa64edb,
+        type: 3}
+      propertyPath: 'stageKillThresholds.Array.data[2]'
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 9033401398058364464, guid: fb92f2edbd9ddb94ebf93d4defa64edb,
         type: 3}
       propertyPath: m_Name
