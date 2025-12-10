@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31067f34-3063-4277-9a29-7099b29df88a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MotorcycleScene/Scenes/CompilationScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MotorcycleScene/Scenes/CompilationScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MotorcycleScene/Scripts/SceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MotorcycleScene/Scripts/SceneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,27 +26,24 @@
     &quot;assignee&quot;: &quot;LacoPT&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/PBochk/Game-jam.git",
-    "accountId": "3e7d0759-f48e-499f-80e4-006a8eec1bb9"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/PBochk/Game-jam.git&quot;,
+    &quot;accountId&quot;: &quot;3e7d0759-f48e-499f-80e4-006a8eec1bb9&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "PBochk",
-    "repository": "Game-jam"
+    &quot;owner&quot;: &quot;PBochk&quot;,
+    &quot;repository&quot;: &quot;Game-jam&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/MotorcycleScene/Scenes/MotorcycleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/Project_Shooter/Scenes/ArenaTest.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/Project_Shooter/Scenes/ArenaTest.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/Settings/DefaultVolumeProfile.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/MotorcycleScene/Scenes/CompilationScene.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -61,20 +54,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#4 on main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#4 on main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/6000.1.9f1/Editor/Unity" />
@@ -135,7 +128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1765270687086</updated>
       <workItem from="1765270687088" duration="44438000" />
-      <workItem from="1765323845930" duration="898000" />
+      <workItem from="1765323845930" duration="4011000" />
     </task>
     <task id="LOCAL-00001" summary="Player movement revork">
       <option name="closed" value="true" />
@@ -249,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765326010495</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Free bird fade in and motorcycle scene backgroung">
+      <option name="closed" value="true" />
+      <created>1765330676818</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1765330676818</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +303,8 @@
     <MESSAGE value="crowd on the bike scene" />
     <MESSAGE value="dummies rework" />
     <MESSAGE value="compilation scene should be complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="compilation scene should be complete" />
+    <MESSAGE value="Free bird fade in and motorcycle scene backgroung" />
+    <option name="LAST_COMMIT_MESSAGE" value="Free bird fade in and motorcycle scene backgroung" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
