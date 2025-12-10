@@ -9,13 +9,37 @@ EditorBuildSettings:
     path: Assets/Project_Shooter/Scenes/MainMenu.unity
     guid: 28a693cedf2c55041a8f4310c54c128d
   - enabled: 1
+    path: Assets/Project_Shooter/Scenes/Intro.unity
+    guid: 666e138d2dd00a0408912c8e7aceebae
+  - enabled: 1
     path: Assets/Project_Shooter/Scenes/Level_1.unity
     guid: 01acb0d233c936e41b72299ce8078217
+  - enabled: 1
+    path: Assets/Project_Shooter/Scenes/ArenaTest.unity
+    guid: c412cbdc4b0d2194aa79143c3bb2a715
   - enabled: 1
     path: Assets/Project_Shooter/Scenes/EndScene.unity
     guid: 4c4376d5cc8833a48a0fcaed942566ba
   - enabled: 1
+    path: Assets/Project_Shooter/Scenes/HowToPlay.unity
+    guid: a3086c7b662d3b846aa00473f5aa0d97
+  - enabled: 0
     path: Assets/YandexGame/Example/Scenes/ExampleYG.unity
     guid: e49bf7e58fdb4db4c9df51f0ddb8f327
+  - enabled: 1
+    path: Assets/Project_Shooter/Scenes/ARENA TOkotit.unity
+    guid: 95963315af87a36419a9bc754907840a
+  - enabled: 1
+    path: Assets/MotorcycleScene/Scenes/MotorcycleScene.unity
+    guid: 08d8ef6b0c8b060cfac60cb1afaeade3
+  - enabled: 1
+    path: Assets/Project_Shooter/Scenes/BikeScene.unity
+    guid: 31dec0791fd85dd4e8080f811b1f1ab0
+  - enabled: 1
+    path: Assets/Project_Shooter/Scenes/DeathScene.unity
+    guid: be27465d3ca334448925ae9e2c2d1d40
+  - enabled: 1
+    path: Assets/MotorcycleScene/Scenes/CompilationScene.unity
+    guid: 3ed6edc30d3cd095991a4af2f6b6a355
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -3,12 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Shooter.ScriptableObjects;
+using UnityEngine.UI;
 namespace Shooter
 {
     public class MainMenuUI : MonoBehaviour
     {
         public SaveData m_SaveData;
-        // Start is called before the first frame update
+        public Button startButton;
+        public Button howButton;
+        public Button exitButton;
+        private void Awake()
+        {
+            startButton.onClick.AddListener(BtnStart);
+            howButton.onClick.AddListener(HowBtn);
+            exitButton.onClick.AddListener(() => Application.Quit());
+        }
+
         void Start()
         {
             m_SaveData.Load();
@@ -16,7 +26,11 @@ namespace Shooter
 
         public void BtnStart()
         {
-            SceneManager.LoadScene("Level_1");
+            SceneManager.LoadScene("Intro");
+        }
+        public void HowBtn()
+        {
+            SceneManager.LoadScene("HowToPlay");
         }
     }
 }

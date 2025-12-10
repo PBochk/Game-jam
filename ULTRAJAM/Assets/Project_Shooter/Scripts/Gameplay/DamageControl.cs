@@ -73,6 +73,21 @@ namespace Shooter.Gameplay
             StartCoroutine(Co_HitGlow());
         }
 
+        public void ApplyDamageNoShake(float dmg)
+        {
+            
+            if (m_NoDamage || IsDead)
+                return;
+            Damage -= dmg;
+            if (Damage <= 0)
+            {
+                Damage = 0;
+                IsDead = true;
+            }
+            //OnDamaged.Invoke();
+            StartCoroutine(Co_HitGlow());
+        }
+
         public IEnumerator Co_HitGlow()
         {
             HitGlowControl[] glowControls = GetComponentsInChildren<HitGlowControl>();

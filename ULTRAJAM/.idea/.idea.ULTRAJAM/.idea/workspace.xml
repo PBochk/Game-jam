@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="31067f34-3063-4277-9a29-7099b29df88a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="LacoPT" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LacoPT&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/PBochk/Game-jam.git&quot;,
+    &quot;accountId&quot;: &quot;3e7d0759-f48e-499f-80e4-006a8eec1bb9&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;PBochk&quot;,
+    &quot;repository&quot;: &quot;Game-jam&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/MotorcycleScene/Scenes/CompilationScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/Project_Shooter/Scenes/DeathScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/Project_Shooter/Scripts/Player/PlayerChar.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="36bMBZBhDd0ZA8xut2b2ICrXmNX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#4 on main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/6000.1.9f1/Editor/Unity" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/6000.1.9f1/Editor/Unity" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="PTY_MODE" value="Auto" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="useMixedMode" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="useMixedMode" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="31067f34-3063-4277-9a29-7099b29df88a" name="Changes" comment="" />
+      <created>1765270687086</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765270687086</updated>
+      <workItem from="1765270687088" duration="44438000" />
+      <workItem from="1765323845930" duration="9223000" />
+    </task>
+    <task id="LOCAL-00001" summary="Player movement revork">
+      <option name="closed" value="true" />
+      <created>1765281621623</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765281621624</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix что-то">
+      <option name="closed" value="true" />
+      <created>1765281810527</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765281810527</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Shotgut with camera shake">
+      <option name="closed" value="true" />
+      <created>1765290458377</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765290458377</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Changed bullet sprite and added damage for shooting">
+      <option name="closed" value="true" />
+      <created>1765294072311</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765294072311</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix guitext compilation error">
+      <option name="closed" value="true" />
+      <created>1765300937562</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765300937562</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix shot cost">
+      <option name="closed" value="true" />
+      <created>1765301177050</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765301177050</updated>
+    </task>
+    <task id="LOCAL-00007" summary="player hp degradation and healing for damage">
+      <option name="closed" value="true" />
+      <created>1765303538994</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1765303538994</updated>
+    </task>
+    <task id="LOCAL-00008" summary="suicide protection">
+      <option name="closed" value="true" />
+      <created>1765304208917</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1765304208917</updated>
+    </task>
+    <task id="LOCAL-00009" summary="visual enhancing">
+      <option name="closed" value="true" />
+      <created>1765306663086</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1765306663086</updated>
+    </task>
+    <task id="LOCAL-00010" summary="reload indicator">
+      <option name="closed" value="true" />
+      <created>1765308705345</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765308705345</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Motorcycle scene with cube">
+      <option name="closed" value="true" />
+      <created>1765314011322</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1765314011322</updated>
+    </task>
+    <task id="LOCAL-00012" summary="crowd on the bike scene">
+      <option name="closed" value="true" />
+      <created>1765319297168</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1765319297168</updated>
+    </task>
+    <task id="LOCAL-00013" summary="dummies rework">
+      <option name="closed" value="true" />
+      <created>1765320736588</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1765320736588</updated>
+    </task>
+    <task id="LOCAL-00014" summary="compilation scene should be complete">
+      <option name="closed" value="true" />
+      <created>1765326010495</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1765326010495</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Free bird fade in and motorcycle scene backgroung">
+      <option name="closed" value="true" />
+      <created>1765330676818</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1765330676818</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Change to DeathScene">
+      <option name="closed" value="true" />
+      <created>1765332070439</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1765332070439</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Plankton Moan">
+      <option name="closed" value="true" />
+      <created>1765333228144</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1765333228144</updated>
+    </task>
+    <task id="LOCAL-00018" summary="main scene music">
+      <option name="closed" value="true" />
+      <created>1765334130076</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1765334130076</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix sceme music">
+      <option name="closed" value="true" />
+      <created>1765334314587</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1765334314587</updated>
+    </task>
+    <task id="LOCAL-00020" summary="volume">
+      <option name="closed" value="true" />
+      <created>1765334384523</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1765334384523</updated>
+    </task>
+    <task id="LOCAL-00021" summary="player sounds">
+      <option name="closed" value="true" />
+      <created>1765335036020</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1765335036020</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Shot sound play">
+      <option name="closed" value="true" />
+      <created>1765335134785</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1765335134785</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Music ends when we exit menu">
+      <option name="closed" value="true" />
+      <created>1765336142159</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1765336142159</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Music end and grass color">
+      <option name="closed" value="true" />
+      <created>1765337275160</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1765337275161</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Player movement revork" />
+    <MESSAGE value="fix что-то" />
+    <MESSAGE value="Shotgut with camera shake" />
+    <MESSAGE value="Changed bullet sprite and added damage for shooting" />
+    <MESSAGE value="fix guitext compilation error" />
+    <MESSAGE value="fix shot cost" />
+    <MESSAGE value="player hp degradation and healing for damage" />
+    <MESSAGE value="suicide protection" />
+    <MESSAGE value="visual enhancing" />
+    <MESSAGE value="reload indicator" />
+    <MESSAGE value="Motorcycle scene with cube" />
+    <MESSAGE value="crowd on the bike scene" />
+    <MESSAGE value="dummies rework" />
+    <MESSAGE value="compilation scene should be complete" />
+    <MESSAGE value="Free bird fade in and motorcycle scene backgroung" />
+    <MESSAGE value="Change to DeathScene" />
+    <MESSAGE value="Plankton Moan" />
+    <MESSAGE value="main scene music" />
+    <MESSAGE value="fix sceme music" />
+    <MESSAGE value="volume" />
+    <MESSAGE value="player sounds" />
+    <MESSAGE value="Shot sound play" />
+    <MESSAGE value="Music ends when we exit menu" />
+    <MESSAGE value="Music end and grass color" />
+    <option name="LAST_COMMIT_MESSAGE" value="Music end and grass color" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
