@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 namespace Shooter
@@ -21,10 +22,6 @@ namespace Shooter
         public void BtnExit()
         {
             Time.timeScale = 1;
-            var music = FindFirstObjectByType<AudioSource>();
-            var scenes = FindFirstObjectByType<SceneController>();
-            Destroy(music);
-            Destroy(scenes);
             SceneManager.LoadScene("MainMenu");
         }
     }

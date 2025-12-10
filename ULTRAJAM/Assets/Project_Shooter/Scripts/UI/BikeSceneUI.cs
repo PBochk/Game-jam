@@ -19,7 +19,15 @@ public class BikeSceneUI : MonoBehaviour
         temp.a = 0f;
         button.image.color = temp;
         //button.onClick.AddListener(() => SceneManager.LoadScene("Ending"));
-        button.onClick.AddListener(() => SceneManager.LoadScene("MainMenu"));
+        button.onClick.AddListener(() =>
+        {
+            var go = new GameObject("Sacrificial Lamb");
+            DontDestroyOnLoad(go);
+
+            foreach(var root in go.scene.GetRootGameObjects())
+                Destroy(root);                
+            SceneManager.LoadScene("MainMenu");
+        });
     }
 
     private void Update()

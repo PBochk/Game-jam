@@ -171,7 +171,7 @@ namespace Shooter.Gameplay
 
                 m_MovementInput = PlayerControl.MainPlayerController.m_Input_Movement;
 
-                if (Input.GetKeyDown(KeyCode.LeftShift))
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
                     StartDash();
                 }
@@ -457,7 +457,7 @@ namespace Shooter.Gameplay
             {
                 StartCoroutine(Co_Dash());
             }
-            DashSound.Play();
+            
         }
 
         IEnumerator Co_Dash()
