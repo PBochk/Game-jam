@@ -5,17 +5,16 @@ using UnityEngine.UI;
 
 public class ButtonWithDelay : MonoBehaviour
 {
-    //private Button button;
-    private Image image;
-    private TMP_Text text;
+    //[SerializeField] private Button button;
+    [SerializeField] private Image image;
+    [SerializeField] private TMP_Text text;
     public float delay = 3f;
     private void Awake()
     {
-        image = GetComponent<Image>();
-        text = GetComponentInChildren<TMP_Text>();
-        StartCoroutine(WaitForButton());
+        //Debug.Log(button == null);
         image.enabled = false;
         text.enabled = false;
+        StartCoroutine(WaitForButton());
     }
 
     private IEnumerator WaitForButton()
