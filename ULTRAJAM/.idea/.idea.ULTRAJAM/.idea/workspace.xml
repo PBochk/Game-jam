@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="31067f34-3063-4277-9a29-7099b29df88a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ULTRAJAM/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MotorcycleScene/Scenes/CompilationScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MotorcycleScene/Scenes/CompilationScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MotorcycleScene/Scripts/SceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MotorcycleScene/Scripts/SceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,15 +24,15 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "LacoPT"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LacoPT&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/PBochk/Game-jam",
+    "url": "https://github.com/PBochk/Game-jam.git",
     "accountId": "3e7d0759-f48e-499f-80e4-006a8eec1bb9"
   },
   "recentNewPullRequestHead": {
@@ -49,9 +53,9 @@
     <setting file="mock:///home/lacopt/Projects/Unity/Jam/Game-jam/ULTRAJAM/Assets/Settings/DefaultVolumeProfile.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="36bMBZBhDd0ZA8xut2b2ICrXmNX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -62,7 +66,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "#4 on main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -131,6 +135,7 @@
       <option name="presentableId" value="Default" />
       <updated>1765270687086</updated>
       <workItem from="1765270687088" duration="44438000" />
+      <workItem from="1765323845930" duration="802000" />
     </task>
     <task id="LOCAL-00001" summary="Player movement revork">
       <option name="closed" value="true" />

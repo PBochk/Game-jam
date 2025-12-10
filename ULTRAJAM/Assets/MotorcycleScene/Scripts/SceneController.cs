@@ -16,6 +16,7 @@ public class SceneController : MonoBehaviour
         // Делаем так, чтобы объект с музыкой не уничтожался при смене сцен
         if (musicSource != null)
         {
+            DontDestroyOnLoad(gameObject);
             DontDestroyOnLoad(musicSource.gameObject);
 
             if (!musicSource.isPlaying)
